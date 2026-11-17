@@ -1,0 +1,247 @@
+.ecosystem {
+  padding: clamp(5rem, 9vw, 9rem) clamp(1.25rem, 7vw, 8rem);
+  color: #fff;
+  background: #0e2d26;
+}
+
+.ecosystem-heading {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 10vw;
+  align-items: end;
+  margin-bottom: 3.5rem;
+}
+
+.ecosystem-heading h2 {
+  max-width: 850px;
+  margin: 0.8rem 0 0;
+  font: 700 clamp(2.4rem, 4.5vw, 4.8rem)/1.08 "Manrope", sans-serif;
+  letter-spacing: -0.05em;
+}
+
+.ecosystem-heading > p {
+  color: #b8c5c0;
+  font-size: 1.05rem;
+}
+
+.module-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  border-left: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.module {
+  position: relative;
+  min-height: 390px;
+  padding: 2rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.18);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  display: flex;
+  flex-direction: column;
+  transition: background 180ms ease, transform 180ms ease;
+}
+
+.module:hover {
+  z-index: 1;
+  background: #183f35;
+  transform: translateY(-4px);
+}
+
+.module-featured {
+  background: #183f35;
+}
+
+.module-number {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  color: #81958e;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+}
+
+.module-icon {
+  width: 52px;
+  height: 52px;
+  border: 1px solid #c8e36b;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #c8e36b;
+  font: 800 0.9rem "Manrope", sans-serif;
+}
+
+.module h3 {
+  margin: 3.2rem 0 0.75rem;
+  font-size: 1.5rem;
+}
+
+.module p {
+  color: #b8c5c0;
+  font-size: 0.92rem;
+}
+
+.module-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: auto;
+}
+
+.module-tags span {
+  padding: 0.3rem 0.55rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #dbe3df;
+  font-size: 0.68rem;
+}
+
+.product-flow {
+  margin-top: 3rem;
+  padding: 1.25rem 1.5rem;
+  background: #c8e36b;
+  color: #0e2d26;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.72rem;
+}
+
+.product-flow i {
+  color: #6f8037;
+  font-style: normal;
+}
+
+@media (max-width: 900px) {
+  .ecosystem-heading {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .ecosystem-heading > p {
+    max-width: 650px;
+  }
+
+  .module-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product-flow {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .ecosystem {
+    padding-block: 4.5rem;
+  }
+
+  .module-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .module {
+    min-height: 330px;
+  }
+
+  .product-flow i {
+    display: none;
+  }
+
+  .product-flow span {
+    width: calc(50% - 0.5rem);
+  }
+}
+
+.contact-card {
+  margin: 0;
+  padding: clamp(1.6rem, 3vw, 2.5rem);
+  background: #fbfaf6;
+  color: #16231f;
+  font-style: normal;
+  box-shadow: 0 24px 60px rgba(14, 45, 38, 0.2);
+}
+
+.contact-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #64716c;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.contact-monogram {
+  width: 38px;
+  height: 38px;
+  border: 1px solid #183f35;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #183f35;
+  font: 800 0.72rem "Manrope", sans-serif;
+}
+
+.contact-card h3 {
+  margin: 2.2rem 0 0.35rem;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+}
+
+.contact-card > p {
+  color: #64716c;
+}
+
+.contact-card dl {
+  margin: 1.8rem 0;
+}
+
+.contact-card dl div {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 1rem;
+  padding: 0.7rem 0;
+  border-top: 1px solid #d9ddd5;
+}
+
+.contact-card dt {
+  color: #64716c;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.contact-card dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.contact-card a {
+  color: #16231f;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.contact-card a:hover {
+  color: #e8793e;
+}
+
+.contact-linkedin {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+  border-top: 2px solid #183f35;
+}
+
+@media (max-width: 600px) {
+  .contact-card dl div {
+    grid-template-columns: 1fr;
+    gap: 0.15rem;
+  }
+}
